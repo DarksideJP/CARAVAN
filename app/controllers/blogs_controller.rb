@@ -29,6 +29,12 @@ class BlogsController < ApplicationController
   	redirect_to blog_path(blog)
   end
 
+  def destroy
+  	blog = Blog.fine(params[:id])
+  	blog.destroy
+  	redirect_to bolgs_path
+  end
+
   private
 
   def blog_params
