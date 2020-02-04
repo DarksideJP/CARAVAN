@@ -30,9 +30,9 @@ class BlogsController < ApplicationController
   end
 
   def destroy
-  	blog = Blog.fine(params[:id])
+  	blog = Blog.find(params[:id])
   	blog.destroy
-  	redirect_to bolgs_path
+  	redirect_to blogs_path
   end
 
   private
